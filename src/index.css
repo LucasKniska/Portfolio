@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Young Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ─── Snowy sunrise base — warm ink mirrors Score AI's own brand language ── */
+  --color-canvas: #f8f4ee;
+  --color-ink: #2c1a06;
+  --color-ink-muted: #55432e;
+  --color-ink-soft: #8a7860;
+
+  --color-surface: rgba(255, 251, 245, 0.78);
+  --color-border: rgba(44, 26, 6, 0.12);
+
+  --color-sunrise-gold: #ffd9a0;
+  --color-sunrise-pink: #ffc9b8;
+  --color-sunrise-sky: #eaf2f7;
+  --color-mountain-far: #c9d5e3;
+  --color-mountain-near: #93a6bc;
+
+  --color-accent: #f97316;
+  --color-accent-hover: #c2410c;
+
+  /* ─── Category accents: one warm ramp, one cool ramp, no stragglers ─── */
+  --color-trucks: #d97706;
+  --color-music: #f97316;
+  --color-eclipse: #e11d48;
+  --color-finance: #0ea5e9;
+  --color-finance-down: #e11d48;
+  --color-space: #6366f1;
+  --color-nasa: #4338ca;
+
+  --shadow-pane: 0 4px 24px rgba(60, 50, 40, 0.10), 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  --shadow-pane-active: 0 20px 55px -10px rgba(60, 50, 40, 0.22), 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+
+  --animate-chart-drift: chart-drift 16s linear infinite;
+  --animate-twinkle: twinkle 3.4s ease-in-out infinite;
+  --animate-corona-pulse: corona-pulse 6s ease-in-out infinite;
+  --animate-note-float: note-float 11s linear infinite;
+  --animate-road-drift: road-drift 9s linear infinite;
+  --animate-drone-bob: drone-bob 4.5s ease-in-out infinite;
+  --animate-radar-ping: radar-ping 3.6s ease-out infinite;
+  --animate-rover-drift: rover-drift 14s linear infinite;
+}
+
+@keyframes chart-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 1; }
+}
+@keyframes corona-pulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.035); }
+}
+@keyframes note-float {
+  0% { transform: translateY(0); opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(-160px); opacity: 0; }
+}
+@keyframes road-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes drone-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes radar-ping {
+  0% { transform: scale(0.4); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+@keyframes rover-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+body {
+  background: var(--color-canvas);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
