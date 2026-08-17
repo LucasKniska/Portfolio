@@ -7,9 +7,9 @@ export const bio =
 
 export const education = {
   school: "Stanford University",
-  degree: "B.S. Computer Science, GPA 3.97",
+  degree: "B.S. Computer Science",
   location: "Palo Alto, CA",
-  dateRange: "Expected Graduation: 2029",
+  dateRange: "Expected Graduation: 2028",
   coursework: [
     "Applied Machine Learning",
     "Computer Systems",
@@ -36,6 +36,7 @@ export const skillGroups: { label: string; items: string[] }[] = [
       "EventBridge",
       "PostgreSQL/RDS",
       "WebSockets",
+      "Datadog",
     ],
   },
   {
